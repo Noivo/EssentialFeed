@@ -12,6 +12,7 @@
 		A79CCEF629897A700018A77E /* EssentialFeedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79CCEF529897A700018A77E /* EssentialFeedTests.swift */; };
 		A79CCEF729897A700018A77E /* EssentialFeed.h in Headers */ = {isa = PBXBuildFile; fileRef = A79CCEE929897A700018A77E /* EssentialFeed.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A79CCF0129897ABC0018A77E /* FeedItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79CCF0029897ABC0018A77E /* FeedItem.swift */; };
+		A79CCF0329897BEF0018A77E /* FeedLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79CCF0229897BEF0018A77E /* FeedLoader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,6 +32,7 @@
 		A79CCEF029897A700018A77E /* EssentialFeedTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EssentialFeedTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A79CCEF529897A700018A77E /* EssentialFeedTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EssentialFeedTests.swift; sourceTree = "<group>"; };
 		A79CCF0029897ABC0018A77E /* FeedItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedItem.swift; sourceTree = "<group>"; };
+		A79CCF0229897BEF0018A77E /* FeedLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedLoader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +78,7 @@
 				A79CCEE929897A700018A77E /* EssentialFeed.h */,
 				A79CCEEA29897A700018A77E /* EssentialFeed.docc */,
 				A79CCF0029897ABC0018A77E /* FeedItem.swift */,
+				A79CCF0229897BEF0018A77E /* FeedLoader.swift */,
 			);
 			path = EssentialFeed;
 			sourceTree = "<group>";
@@ -197,6 +200,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A79CCF0329897BEF0018A77E /* FeedLoader.swift in Sources */,
 				A79CCEEB29897A700018A77E /* EssentialFeed.docc in Sources */,
 				A79CCF0129897ABC0018A77E /* FeedItem.swift in Sources */,
 			);
