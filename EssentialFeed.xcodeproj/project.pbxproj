@@ -13,6 +13,7 @@
 		A79CCEF729897A700018A77E /* EssentialFeed.h in Headers */ = {isa = PBXBuildFile; fileRef = A79CCEE929897A700018A77E /* EssentialFeed.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A79CCF0129897ABC0018A77E /* FeedItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79CCF0029897ABC0018A77E /* FeedItem.swift */; };
 		A79CCF0329897BEF0018A77E /* FeedLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79CCF0229897BEF0018A77E /* FeedLoader.swift */; };
+		A79CCF06298A717E0018A77E /* RemoteFeedLoaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79CCF05298A717E0018A77E /* RemoteFeedLoaderTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,6 +34,7 @@
 		A79CCEF529897A700018A77E /* EssentialFeedTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EssentialFeedTests.swift; sourceTree = "<group>"; };
 		A79CCF0029897ABC0018A77E /* FeedItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedItem.swift; sourceTree = "<group>"; };
 		A79CCF0229897BEF0018A77E /* FeedLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedLoader.swift; sourceTree = "<group>"; };
+		A79CCF05298A717E0018A77E /* RemoteFeedLoaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteFeedLoaderTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +88,7 @@
 			isa = PBXGroup;
 			children = (
 				A79CCEF529897A700018A77E /* EssentialFeedTests.swift */,
+				A79CCF05298A717E0018A77E /* RemoteFeedLoaderTests.swift */,
 			);
 			path = EssentialFeedTests;
 			sourceTree = "<group>";
@@ -219,6 +222,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A79CCEF629897A700018A77E /* EssentialFeedTests.swift in Sources */,
+				A79CCF06298A717E0018A77E /* RemoteFeedLoaderTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
