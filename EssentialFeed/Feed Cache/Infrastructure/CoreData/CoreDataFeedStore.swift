@@ -16,63 +16,37 @@ public final class CoreDataFeedStore: FeedStore {
     container = try NSPersistentContainer.load(modelName: "FeedStore", url: storeURL, in: bundle)
     context = container.newBackgroundContext()
   }
-
+  
   public func retrieve(completion: @escaping RetrievalCompletion) {
     perform { context in
-      do {
-        let request = NSFetchRequest<ManagedCache>(entityName: ManagedCache.entity().name!)
-        request.returnsObjectsAsFaults = false
-        if let cache = try context.fetch(request).first {
-          completion(.found(
-            feed: cache.feed
-              .compactMap { ($0 as? ManagedFeedImage) }
-              .map {
-                LocalFeedImage(id: $0.id, description: $0.imageDescription, location: $0.location, url: $0.url)
-              },
-            timestamp: cache.timestamp))
-        } else {
-          completion(.empty)
+      completion(Result {
+        try ManagedCache.find(in: context).map {
+          return CachedFeed(feed: $0.localFeed, timestamp: $0.timestamp)
         }
-      } catch {
-        completion(.failure(error))
-      }
+      })
     }
   }
 
   public func insert(_ feed: [LocalFeedImage], timestamp: Date, completion: @escaping InsertionCompletion) {
     perform { context in
-      do {
+      completion(Result {
         let managedCache = try ManagedCache.newUniqueInstance(in: context)
         managedCache.timestamp = timestamp
-        managedCache.feed = NSOrderedSet(array: feed.map { local in
-          let managed = ManagedFeedImage(context: context)
-          managed.id = local.id
-          managed.imageDescription = local.description
-          managed.location = local.location
-          managed.url = local.url
-          return managed
-        })
-
+        managedCache.feed = ManagedFeedImage.images(from: feed, in: context)
         try context.save()
-        completion(nil)
-      } catch {
-        completion(error)
-      }
+      })
     }
   }
 
   public func deleteCachedFeed(completion: @escaping DeletionCompletion) {
     perform { context in
-      do {
+      completion(Result {
         try ManagedCache.find(in: context).map(context.delete).map(context.save)
-        completion(nil)
-      } catch {
-        completion(error)
-      }
+      })
     }
   }
-  
-  private func perform(_ action: @escaping (NSManagedObjectContext) -> Void) {
+
+  func perform(_ action: @escaping (NSManagedObjectContext) -> Void) {
     let context = self.context
     context.perform { action(context) }
   }
