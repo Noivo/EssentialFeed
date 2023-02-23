@@ -52,16 +52,29 @@ final class FeedViewControllerTests: XCTestCase {
     
     sut.loadViewIfNeeded()
     
-    asserThat(sut, isRendering: [])
+    assertThat(sut, isRendering: [])
     
     loader.completeFeedLoading(with: [image0], at: 0)
-    asserThat(sut, isRendering: [image0])
+    assertThat(sut, isRendering: [image0])
     
     assertThat(sut, hasViewConfiguredFor: image0, at: 0)
     
     sut.simulateUserInitiatedFeedReload()
     loader.completeFeedLoading(with: [image0, image1, image2, image3], at: 1)
-    asserThat(sut, isRendering: [image0, image1, image2, image3])
+    assertThat(sut, isRendering: [image0, image1, image2, image3])
+  }
+  
+  func test_loadFeedCompletion_doesNotAlterCurrentRenderingStateOnError() {
+    let image0 = makeImage()
+    let (sut, loader) = makeSUT()
+    
+    sut.loadViewIfNeeded()
+    loader.completeFeedLoading(with: [image0], at: 0)
+    assertThat(sut, isRendering: [image0])
+    
+    sut.simulateUserInitiatedFeedReload()
+    loader.completeFeedLoadingWithError(at: 1)
+    assertThat(sut, isRendering: [image0])
   }
   
   // MARK: - Helpers
@@ -74,7 +87,7 @@ final class FeedViewControllerTests: XCTestCase {
     return (sut, loader)
   }
   
-  private func asserThat(_ sut: FeedViewController, isRendering feed: [FeedImage], file: StaticString =  #file, line: UInt = #line) {
+  private func assertThat(_ sut: FeedViewController, isRendering feed: [FeedImage], file: StaticString =  #file, line: UInt = #line) {
     guard sut.numberOfRenderedFeedImageViews() == feed.count else {
       return XCTFail("Expected \(feed.count) instance, got \(sut.numberOfRenderedFeedImageViews()) instead", file: file, line: line)
     }
@@ -115,6 +128,11 @@ final class FeedViewControllerTests: XCTestCase {
     
     func completeFeedLoading(with feed: [FeedImage] = [], at index: Int = 0) {
       completions[index](.success(feed))
+    }
+    
+    func completeFeedLoadingWithError(at index: Int = 0) {
+      let error = NSError(domain: "an error", code: 0)
+      completions[index](.failure(error))
     }
   }
 }
