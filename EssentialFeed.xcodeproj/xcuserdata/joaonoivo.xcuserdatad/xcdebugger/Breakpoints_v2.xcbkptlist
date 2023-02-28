@@ -65,6 +65,21 @@
                   endingLineNumber = "37"
                   offsetFromSymbolStart = "56">
                </Location>
+               <Location
+                  uuid = "C69CE002-3006-48CA-A8A2-F1AD4E24ADC7 - 1d205f6f91dc5814"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "EssentialFeediOS.FeedViewController.tableView(_: __C.UITableView, numberOfRowsInSection: Swift.Int) -&gt; Swift.Int"
+                  moduleName = "EssentialFeediOS"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/joaonoivo/Desktop/EssentialFeed/EssentialFeediOS/Feed%20UI/Controllers/FeedViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "30"
+                  endingLineNumber = "30"
+                  offsetFromSymbolStart = "56">
+               </Location>
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
