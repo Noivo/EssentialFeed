@@ -159,6 +159,7 @@
 		A718ED0429AF9CFE0080252C /* FeedViewControllerTests+Localization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FeedViewControllerTests+Localization.swift"; sourceTree = "<group>"; };
 		A718ED0729AFA22A0080252C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Feed.strings; sourceTree = "<group>"; };
 		A718ED0929AFA25C0080252C /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Feed.strings"; sourceTree = "<group>"; };
+		A718ED0A29AFA29F0080252C /* el */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = el; path = el.lproj/Feed.strings; sourceTree = "<group>"; };
 		A753BC16298D346400A66D5C /* URLSessionHTTPClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionHTTPClientTests.swift; sourceTree = "<group>"; };
 		A753BC19298E88B300A66D5C /* XCTestCase+MemoryLeakTracking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+MemoryLeakTracking.swift"; sourceTree = "<group>"; };
 		A753BC1B298FB79300A66D5C /* URLSessionHTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionHTTPClient.swift; sourceTree = "<group>"; };
@@ -701,6 +702,7 @@
 				en,
 				Base,
 				"pt-BR",
+				el,
 			);
 			mainGroup = A79CCEDC29897A700018A77E;
 			productRefGroup = A79CCEE729897A700018A77E /* Products */;
@@ -904,6 +906,7 @@
 			children = (
 				A718ED0729AFA22A0080252C /* en */,
 				A718ED0929AFA25C0080252C /* pt-BR */,
+				A718ED0A29AFA29F0080252C /* el */,
 			);
 			name = Feed.strings;
 			sourceTree = "<group>";
