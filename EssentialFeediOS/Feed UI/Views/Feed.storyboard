@@ -10,15 +10,35 @@
         <!--Feed View Controller-->
         <scene sceneID="984-3E-kch">
             <objects>
-                <tableViewController id="SZP-Vg-X7i" customClass="FeedViewController" customModule="Prototype" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="SZP-Vg-X7i" customClass="FeedViewController" customModule="EssentialFeediOS" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="Rxa-vQ-ftg">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <view key="tableHeaderView" contentMode="scaleToFill" id="90f-n5-JXs">
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="90f-n5-JXs" customClass="ErrorView" customModule="EssentialFeediOS">
                             <rect key="frame" x="0.0" y="0.0" width="393" height="16"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QCb-3S-P0e">
+                                    <rect key="frame" x="0.0" y="0.0" width="393" height="16"/>
+                                    <color key="backgroundColor" red="0.99215686274509807" green="0.396078431372549" blue="0.40784313725490196" alpha="1" colorSpace="calibratedRGB"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <gestureRecognizers/>
+                            <constraints>
+                                <constraint firstAttribute="bottom" secondItem="QCb-3S-P0e" secondAttribute="bottom" id="4Bj-e5-iyU"/>
+                                <constraint firstItem="QCb-3S-P0e" firstAttribute="top" secondItem="90f-n5-JXs" secondAttribute="top" id="UMP-ZE-rPw"/>
+                                <constraint firstItem="QCb-3S-P0e" firstAttribute="leading" secondItem="90f-n5-JXs" secondAttribute="leading" id="ZPp-Dh-ZAf"/>
+                                <constraint firstAttribute="trailing" secondItem="QCb-3S-P0e" secondAttribute="trailing" id="y8W-So-RMS"/>
+                            </constraints>
+                            <connections>
+                                <outlet property="label" destination="QCb-3S-P0e" id="Gkl-qO-e0A"/>
+                                <outletCollection property="gestureRecognizers" destination="k5w-wH-5ZP" appends="YES" id="S7G-Tu-eBn"/>
+                            </connections>
                         </view>
                         <view key="tableFooterView" contentMode="scaleToFill" id="2p7-i5-ctC">
                             <rect key="frame" x="0.0" y="674" width="393" height="16"/>
@@ -26,7 +46,7 @@
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         </view>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="FeedImageCell" rowHeight="580" id="vQa-ZO-0nd" customClass="FeedImageCell" customModule="Prototype" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="FeedImageCell" rowHeight="580" id="vQa-ZO-0nd" customClass="FeedImageCell" customModule="EssentialFeediOS" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="66" width="393" height="580"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="vQa-ZO-0nd" id="SzU-a7-Wn1">
@@ -147,10 +167,18 @@ Location</string>
                             <action selector="refresh" destination="SZP-Vg-X7i" eventType="valueChanged" id="OF1-EE-GTn"/>
                         </connections>
                     </refreshControl>
+                    <connections>
+                        <outlet property="errorView" destination="90f-n5-JXs" id="jYV-wR-lW4"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LTu-Nl-Fsd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="k5w-wH-5ZP">
+                    <connections>
+                        <action selector="hideMessageAnimated" destination="90f-n5-JXs" id="jUf-yb-az3"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="-298" y="-99"/>
+            <point key="canvasLocation" x="-298.47328244274809" y="-99.295774647887328"/>
         </scene>
     </scenes>
     <resources>
