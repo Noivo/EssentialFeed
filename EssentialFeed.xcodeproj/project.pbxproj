@@ -280,6 +280,7 @@
 			isa = PBXGroup;
 			children = (
 				A710CAE929A80AA50042BEA6 /* Feed Image Loader */,
+				A710CB0729A91E140042BEA6 /* Feed Presentation */,
 				A710CAE629A80A730042BEA6 /* Feed UI */,
 			);
 			path = EssentialFeediOS;
@@ -304,7 +305,6 @@
 			isa = PBXGroup;
 			children = (
 				A710CB0429A813460042BEA6 /* Composers */,
-				A710CB0729A91E140042BEA6 /* Feed Presentation */,
 				A710CAE829A80A8E0042BEA6 /* Views */,
 				A710CAE729A80A870042BEA6 /* Controllers */,
 			);
