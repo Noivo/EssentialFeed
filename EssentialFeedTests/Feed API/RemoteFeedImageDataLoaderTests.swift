@@ -24,7 +24,7 @@ class RemoteFeedImageDataLoader {
       guard self != nil else { return }
       
       switch result {
-      case let .success(data, response):
+      case let .success((data, response)):
         if response.statusCode == 200, !data.isEmpty {
           completion(.success(data))
         } else {
@@ -159,13 +159,13 @@ class RemoteFeedImageDataLoaderTests: XCTestCase {
   }
 
   private class HTTPClientSpy: HTTPClient {
-    private var messages = [(url: URL, completion: (HTTPClientResult) -> Void)]()
+    private var messages = [(url: URL, completion: (HTTPClient.Result) -> Void)]()
     
     var requestedURLs: [URL] {
       return messages.map { $0.url }
     }
     
-    func get(from url: URL, completion: @escaping (HTTPClientResult) -> Void) {
+    func get(from url: URL, completion: @escaping (HTTPClient.Result) -> Void) {
       messages.append((url, completion))
     }
 
@@ -180,7 +180,7 @@ class RemoteFeedImageDataLoaderTests: XCTestCase {
         httpVersion: nil,
         headerFields: nil
       )!
-      messages[index].completion(.success(data, response))
+      messages[index].completion(.success((data, response)))
     }
   }
 }
