@@ -202,6 +202,7 @@
 		A762CCD8299D4C4D00FAAFEA /* ManagedFeedImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagedFeedImage.swift; sourceTree = "<group>"; };
 		A762CCDE299E77DC00FAAFEA /* EssentialFeedCacheIntegrationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EssentialFeedCacheIntegrationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A762CCE0299E77DC00FAAFEA /* EssentialFeedCacheIntegrationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EssentialFeedCacheIntegrationTests.swift; sourceTree = "<group>"; };
+		A780135A29D1DF280096AF28 /* Readme.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Readme.md; sourceTree = "<group>"; };
 		A7823E3729C341CB0049DD26 /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
 		A7823E3C29C34F6A0049DD26 /* UIRefreshControl+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIRefreshControl+Helpers.swift"; sourceTree = "<group>"; };
 		A7823E4329C364220049DD26 /* FeedPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedPresenterTests.swift; sourceTree = "<group>"; };
@@ -508,6 +509,7 @@
 		A79CCEDC29897A700018A77E = {
 			isa = PBXGroup;
 			children = (
+				A780135A29D1DF280096AF28 /* Readme.md */,
 				A79CCEE829897A700018A77E /* EssentialFeed */,
 				A79CCEF429897A700018A77E /* EssentialFeedTests */,
 				A753BC222990542100A66D5C /* EssentialFeedAPIEndToEndTests */,
