@@ -69,7 +69,7 @@
 		A762CCE9299E79D500FAAFEA /* SharedTestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = A762CCA72998293200FAAFEA /* SharedTestHelpers.swift */; };
 		A762CCEA299E79DF00FAAFEA /* FeedCacheTestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = A762CCA52998288600FAAFEA /* FeedCacheTestHelpers.swift */; };
 		A780135B29D1E0490096AF28 /* FeedImageDataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A710CAEA29A80AD30042BEA6 /* FeedImageDataLoader.swift */; };
-		A780135D29D1E0EE0096AF28 /* RemoteFeedImageDataLoaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A780135C29D1E0EE0096AF28 /* RemoteFeedImageDataLoaderTests.swift */; };
+		A780135D29D1E0EE0096AF28 /* LoadFeedImageDataFromRemoteUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A780135C29D1E0EE0096AF28 /* LoadFeedImageDataFromRemoteUseCaseTests.swift */; };
 		A780136029D5A2120096AF28 /* HTTPClientSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = A780135F29D5A2120096AF28 /* HTTPClientSpy.swift */; };
 		A780136229D5A2C60096AF28 /* RemoteFeedImageDataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A780136129D5A2C60096AF28 /* RemoteFeedImageDataLoader.swift */; };
 		A780136529D5C6690096AF28 /* HTTPURLResponse+StatusCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = A780136429D5C6690096AF28 /* HTTPURLResponse+StatusCode.swift */; };
@@ -208,7 +208,7 @@
 		A762CCDE299E77DC00FAAFEA /* EssentialFeedCacheIntegrationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EssentialFeedCacheIntegrationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A762CCE0299E77DC00FAAFEA /* EssentialFeedCacheIntegrationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EssentialFeedCacheIntegrationTests.swift; sourceTree = "<group>"; };
 		A780135A29D1DF280096AF28 /* Readme.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Readme.md; sourceTree = "<group>"; };
-		A780135C29D1E0EE0096AF28 /* RemoteFeedImageDataLoaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteFeedImageDataLoaderTests.swift; sourceTree = "<group>"; };
+		A780135C29D1E0EE0096AF28 /* LoadFeedImageDataFromRemoteUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadFeedImageDataFromRemoteUseCaseTests.swift; sourceTree = "<group>"; };
 		A780135F29D5A2120096AF28 /* HTTPClientSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClientSpy.swift; sourceTree = "<group>"; };
 		A780136129D5A2C60096AF28 /* RemoteFeedImageDataLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteFeedImageDataLoader.swift; sourceTree = "<group>"; };
 		A780136429D5C6690096AF28 /* HTTPURLResponse+StatusCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HTTPURLResponse+StatusCode.swift"; sourceTree = "<group>"; };
@@ -606,7 +606,7 @@
 				A780135E29D5A2040096AF28 /* Helpers */,
 				A79CCF05298A717E0018A77E /* LoadFeedFromRemoteUseCaseTests.swift */,
 				A753BC16298D346400A66D5C /* URLSessionHTTPClientTests.swift */,
-				A780135C29D1E0EE0096AF28 /* RemoteFeedImageDataLoaderTests.swift */,
+				A780135C29D1E0EE0096AF28 /* LoadFeedImageDataFromRemoteUseCaseTests.swift */,
 			);
 			path = "Feed API";
 			sourceTree = "<group>";
@@ -948,7 +948,7 @@
 				A780136729D5C82B0096AF28 /* URLProtocolStub.swift in Sources */,
 				A762CCA42998187C00FAAFEA /* ValidateFeedCacheUseCaseTests.swift in Sources */,
 				A7823E4429C364220049DD26 /* FeedPresenterTests.swift in Sources */,
-				A780135D29D1E0EE0096AF28 /* RemoteFeedImageDataLoaderTests.swift in Sources */,
+				A780135D29D1E0EE0096AF28 /* LoadFeedImageDataFromRemoteUseCaseTests.swift in Sources */,
 				A79CCF06298A717E0018A77E /* LoadFeedFromRemoteUseCaseTests.swift in Sources */,
 				A7823E5829C485730049DD26 /* FeedImagePresenterTests.swift in Sources */,
 				A762CCB6299D15D900FAAFEA /* XCTestCase+FailableInsertFeedStoreSpecs.swift in Sources */,
