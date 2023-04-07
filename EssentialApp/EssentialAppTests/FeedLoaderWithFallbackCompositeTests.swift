@@ -58,14 +58,10 @@ class FeedLoaderWithFallbackCompositeTests: XCTestCase {
       default:
         XCTFail("Expected \(expectedResult), got \(receivedResult) instead", file: file, line: line)
       }
-
+      
       exp.fulfill()
     }
     wait(for: [exp], timeout: 1)
-  }
-  
-  private func anyNSError() -> NSError {
-    return NSError(domain: "any error", code: 0)
   }
 
   private func uniqueFeed() -> [FeedImage] {
