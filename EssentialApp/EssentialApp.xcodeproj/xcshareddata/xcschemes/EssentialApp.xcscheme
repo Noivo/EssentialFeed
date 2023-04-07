@@ -39,6 +39,17 @@
          </BuildableReference>
       </CodeCoverageTargets>
       <Testables>
+         <TestableReference
+            skipped = "NO"
+            parallelizable = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "A784E79A29DF4DC300148AA1"
+               BuildableName = "EssentialAppTests.xctest"
+               BlueprintName = "EssentialAppTests"
+               ReferencedContainer = "container:EssentialApp.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction
