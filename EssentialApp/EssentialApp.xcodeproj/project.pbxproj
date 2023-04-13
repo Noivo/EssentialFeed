@@ -33,6 +33,7 @@
 		A784E7C429E46E5100148AA1 /* FeedImageDataLoaderCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = A784E7C329E46E5100148AA1 /* FeedImageDataLoaderCache.swift */; };
 		A784E7CC29E59BC000148AA1 /* EssentialAppUIAcceptanceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A784E7CB29E59BC000148AA1 /* EssentialAppUIAcceptanceTests.swift */; };
 		A784E7D529E6AF6900148AA1 /* DebuggingSceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A784E7D429E6AF6900148AA1 /* DebuggingSceneDelegate.swift */; };
+		A7989CEC29E8A35300D23C37 /* SceneDelgateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7989CEB29E8A35300D23C37 /* SceneDelgateTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -96,6 +97,7 @@
 		A784E7C929E59BC000148AA1 /* EssentialAppUIAcceptanceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EssentialAppUIAcceptanceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A784E7CB29E59BC000148AA1 /* EssentialAppUIAcceptanceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EssentialAppUIAcceptanceTests.swift; sourceTree = "<group>"; };
 		A784E7D429E6AF6900148AA1 /* DebuggingSceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebuggingSceneDelegate.swift; sourceTree = "<group>"; };
+		A7989CEB29E8A35300D23C37 /* SceneDelgateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelgateTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -182,6 +184,7 @@
 				A784E7A829E0594F00148AA1 /* FeedImageDataLoaderWithFallbackCompositeTests.swift */,
 				A784E7B129E2B6BF00148AA1 /* FeedLoaderCacheDecorator.swift */,
 				A784E7BB29E347DB00148AA1 /* FeedImageDataLoaderCacheDecoratorTests.swift */,
+				A7989CEB29E8A35300D23C37 /* SceneDelgateTests.swift */,
 			);
 			path = EssentialAppTests;
 			sourceTree = "<group>";
@@ -358,6 +361,7 @@
 				A784E7B029E08E8200148AA1 /* SharedTestHelpers.swift in Sources */,
 				A784E7BC29E347DB00148AA1 /* FeedImageDataLoaderCacheDecoratorTests.swift in Sources */,
 				A784E7B629E2B85700148AA1 /* XCTestCase+FeedLoader.swift in Sources */,
+				A7989CEC29E8A35300D23C37 /* SceneDelgateTests.swift in Sources */,
 				A784E7C029E3494800148AA1 /* XCTestCase+FeedImageDataLoader.swift in Sources */,
 				A784E7A929E0594F00148AA1 /* FeedImageDataLoaderWithFallbackCompositeTests.swift in Sources */,
 				A784E7BE29E348B900148AA1 /* FeedImageDataLoaderSpy.swift in Sources */,
