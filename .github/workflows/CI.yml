@@ -21,5 +21,4 @@ jobs:
       if: failure()
       uses: actions/upload-artifact@v2
       with:
-        save-only: true
-        path: .EssentialFeed/EssentialFeed/EssentialFeediOSTests/snapshots
+        path: .EssentialFeediOSTests/snapshots
