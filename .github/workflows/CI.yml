@@ -19,7 +19,7 @@ jobs:
       
     - name: Save snapshots
       if: failure()
-      uses: actions/upload-artifact@latest
+      uses: actions/upload-artifact@v2
       with:
         save-only: true
         path: .EssentialFeed/EssentialFEed/EssentialFeediOSTests/snapshots
