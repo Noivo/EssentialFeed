@@ -22,4 +22,4 @@ jobs:
       uses: actions/upload-artifact@v2
       with:
         save-only: true
-        path: .EssentialFeed/EssentialFEed/EssentialFeediOSTests/snapshots
+        path: .EssentialFeed/EssentialFeed/EssentialFeediOSTests/snapshots
