@@ -51,6 +51,7 @@
 		A7989D0E29E9607100D23C37 /* FeedAcceptanceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7989D0D29E9607100D23C37 /* FeedAcceptanceTests.swift */; };
 		A7989D1029E9A71E00D23C37 /* HTTPClientStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7989D0F29E9A71E00D23C37 /* HTTPClientStub.swift */; };
 		A7989D1229E9A75F00D23C37 /* InMemoryFeedStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7989D1129E9A75F00D23C37 /* InMemoryFeedStore.swift */; };
+		A7989D2E29ED6AD100D23C37 /* UIView+TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7989D2D29ED6AD100D23C37 /* UIView+TestHelpers.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -124,6 +125,7 @@
 		A7989D0D29E9607100D23C37 /* FeedAcceptanceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedAcceptanceTests.swift; sourceTree = "<group>"; };
 		A7989D0F29E9A71E00D23C37 /* HTTPClientStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClientStub.swift; sourceTree = "<group>"; };
 		A7989D1129E9A75F00D23C37 /* InMemoryFeedStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InMemoryFeedStore.swift; sourceTree = "<group>"; };
+		A7989D2D29ED6AD100D23C37 /* UIView+TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+TestHelpers.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -233,6 +235,7 @@
 				A784E7BF29E3494800148AA1 /* XCTestCase+FeedImageDataLoader.swift */,
 				A7989D0F29E9A71E00D23C37 /* HTTPClientStub.swift */,
 				A7989D1129E9A75F00D23C37 /* InMemoryFeedStore.swift */,
+				A7989D2D29ED6AD100D23C37 /* UIView+TestHelpers.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -378,6 +381,7 @@
 				A784E7B229E2B6BF00148AA1 /* FeedLoaderCacheDecorator.swift in Sources */,
 				A7989D1029E9A71E00D23C37 /* HTTPClientStub.swift in Sources */,
 				A7989D0829E951DD00D23C37 /* UIRefreshControl+TestHelpers.swift in Sources */,
+				A7989D2E29ED6AD100D23C37 /* UIView+TestHelpers.swift in Sources */,
 				A784E7B429E2B75800148AA1 /* FeedLoaderStub.swift in Sources */,
 				A784E7AE29E08E3100148AA1 /* XCTestCase+MemoryLeakTracking.swift in Sources */,
 				A7989D0E29E9607100D23C37 /* FeedAcceptanceTests.swift in Sources */,
