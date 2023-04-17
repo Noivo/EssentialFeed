@@ -34,8 +34,8 @@ class FeedSnapshotTests: XCTestCase {
 
     sut.display(.error(message: "This is a\nmulti-line\nerror message"))
 
-    record(snapshot: sut.snapshot(for: .iPhone8(style: .light)), named: "FEED_WITH_ERROR_MESSAGE_light")
-    record(snapshot: sut.snapshot(for: .iPhone8(style: .dark)), named: "FEED_WITH_ERROR_MESSAGE_dark")
+    assert(snapshot: sut.snapshot(for: .iPhone8(style: .light)), named: "FEED_WITH_ERROR_MESSAGE_light")
+    assert(snapshot: sut.snapshot(for: .iPhone8(style: .dark)), named: "FEED_WITH_ERROR_MESSAGE_dark")
   }
   
   func test_feedWithFailedImageLoading() {
