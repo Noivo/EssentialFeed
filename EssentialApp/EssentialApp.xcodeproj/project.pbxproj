@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A773FC7029F1918600056477 /* CombineHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = A773FC6F29F1918600056477 /* CombineHelpers.swift */; };
 		A780138F29DD69AE0096AF28 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A780138E29DD69AE0096AF28 /* AppDelegate.swift */; };
 		A780139129DD69AE0096AF28 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A780139029DD69AE0096AF28 /* SceneDelegate.swift */; };
 		A780139329DD69AE0096AF28 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A780139229DD69AE0096AF28 /* ViewController.swift */; };
@@ -66,6 +67,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		A773FC6F29F1918600056477 /* CombineHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombineHelpers.swift; sourceTree = "<group>"; };
 		A780138B29DD69AE0096AF28 /* EssentialApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EssentialApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A780138E29DD69AE0096AF28 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A780139029DD69AE0096AF28 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -153,6 +155,7 @@
 				A780139929DD69AF0096AF28 /* LaunchScreen.storyboard */,
 				A780139C29DD69AF0096AF28 /* Info.plist */,
 				A7FA781829F1866A004A6C7F /* FeedImageDataLoaderPresentationAdapter.swift */,
+				A773FC6F29F1918600056477 /* CombineHelpers.swift */,
 			);
 			path = EssentialApp;
 			sourceTree = "<group>";
@@ -302,6 +305,7 @@
 			files = (
 				A7989CF829E9518600D23C37 /* FeedViewAdapter.swift in Sources */,
 				A7989CF529E9518600D23C37 /* FeedLoaderPresentationAdapter.swift in Sources */,
+				A773FC7029F1918600056477 /* CombineHelpers.swift in Sources */,
 				A780139329DD69AE0096AF28 /* ViewController.swift in Sources */,
 				A780138F29DD69AE0096AF28 /* AppDelegate.swift in Sources */,
 				A780139129DD69AE0096AF28 /* SceneDelegate.swift in Sources */,
