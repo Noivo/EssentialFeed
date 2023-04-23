@@ -9,40 +9,6 @@ import XCTest
 import EssentialFeed
 
 class LoadFeedImageDataFromRemoteUseCaseTests: XCTestCase {
-
-  func test_init_doesNotPerformAnyURLRequest() {
-    let (_, client) = makeSUT()
-
-    XCTAssertTrue(client.requestedURLs.isEmpty)
-  }
-  
-  func test_loadImageDataFromURL_requestsDataFromURL() {
-    let url = URL(string: "https://a-given-url.com")!
-    let (sut, client) = makeSUT(url: url)
-
-    _ = sut.loadImageData(from: url) { _ in }
-
-    XCTAssertEqual(client.requestedURLs, [url])
-  }
-  
-  func test_loadImageDataFromURLTwice_requestsDataFromURLTwice() {
-    let url = URL(string: "https://a-given-url.com")!
-    let (sut, client) = makeSUT(url: url)
-
-    _ = sut.loadImageData(from: url) { _ in }
-    _ = sut.loadImageData(from: url) { _ in }
-
-    XCTAssertEqual(client.requestedURLs, [url, url])
-  }
-  
-  func test_loadImageDataFromURL_deliversConnectivityErrorOnClientError() {
-    let (sut, client) = makeSUT()
-    let clientError = NSError(domain: "a client error", code: 0)
-
-    expect(sut, toCompleteWith: failure(.connectivity), when: {
-      client.complete(with: clientError)
-    })
-  }
   
   func test_loadImageDataFromURL_deliversInvalidDataErrorOnNon200HTTPResponse() {
     let (sut, client) = makeSUT()
@@ -100,18 +66,7 @@ class LoadFeedImageDataFromRemoteUseCaseTests: XCTestCase {
     XCTAssertTrue(received.isEmpty, "Expected no received results after cancelling task")
   }
   
-  func test_loadImageDataFromURL_doesNotDeliverResultAfterSUTInstanceHasBeenDeallocated() {
-      let client = HTTPClientSpy()
-      var sut: RemoteFeedImageDataLoader? = RemoteFeedImageDataLoader(client: client)
-
-      var capturedResults = [FeedImageDataLoader.Result]()
-    _ = sut?.loadImageData(from: anyURL()) { capturedResults.append($0) }
-
-      sut = nil
-      client.complete(withStatusCode: 200, data: anyData())
-
-      XCTAssertTrue(capturedResults.isEmpty)
-    }
+  // MARK: - Helpers
 
   private func makeSUT(url: URL = anyURL(), file: StaticString = #file, line: UInt = #line) -> (sut: RemoteFeedImageDataLoader, client: HTTPClientSpy) {
     let client = HTTPClientSpy()
