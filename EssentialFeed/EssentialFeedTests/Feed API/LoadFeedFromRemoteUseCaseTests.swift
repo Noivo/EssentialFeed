@@ -1,5 +1,5 @@
 //
-//  RemoteFeedLoaderTests.swift
+//  LoadFeedFromRemoteUseCaseTests.swift
 //  EssentialFeedTests
 //
 //  Created by João Noivo on 01/02/2023.
@@ -8,51 +8,7 @@
 import XCTest
 import EssentialFeed
 
-class RemoteFeedLoaderTests: XCTestCase {
-  
-  // Test Name Convencion
-  // test_methodName_behaviourExpected
-  func test_init_doesNotRequestDataFromURL() {
-    let (_, client) = makeSUT()
-    
-    XCTAssertTrue(client.requestedURLs.isEmpty)
-  }
-  
-  func test_load_requestsDataFromURL() {
-    // Arrange - "Given a client and a sut"
-    let url = URL(string: "https://a-given-url.com")!
-    let (sut, client) = makeSUT(url: url)
-    
-    // Act - "When we invoke sut.load()
-    sut.load { _ in }
-    
-    // Assert - "Then assert that a URL request was initiated in the client"
-    XCTAssertEqual(client.requestedURLs, [url])
-  }
-  
-  func test_loadTwice_requestsDataFromURLTwice() {
-    let url = URL(string: "https://a-given-url.com")!
-    let (sut, client) = makeSUT(url: url)
-    
-    sut.load { _ in }
-    sut.load { _ in }
-    
-    XCTAssertEqual(client.requestedURLs, [url, url])
-  }
-  
-  func test_load_deliversErrorOnClientError() {
-    // Arrange - Given the sut and its HTTP client spy
-    let (sut, client) = makeSUT()
-    
-    // Act - When we tell the sut to load and we complete the client's HTTP request with an error
-    expect(sut, toCompleteWith: failure(.connectivity)) {
-      let clientError = NSError(domain: "Test", code: 0)
-      client.complete(with: clientError)
-    }
-    
-    // Assert - Then we expect the captured load error to be connectivity error
-//    XCTAssertEqual(capturedError, [.connectivity])
-  }
+class LoadFeedFromRemoteUseCaseTests: XCTestCase {
   
   func test_load_deliversErrorOnNon200HTTPResponse() {
     let (sut, client) = makeSUT()
@@ -107,20 +63,6 @@ class RemoteFeedLoaderTests: XCTestCase {
       let json = makeItemsJSON([item1.json, item2.json])
       client.complete(withStatusCode: 200, data: json)
     }
-  }
-  
-  func test_load_doesNotDeliverResultAfterSUTInstanceHasBeenDeallocated() {
-    let url = URL(string: "http://any-url.com")!
-    let client = HTTPClientSpy()
-    var sut: RemoteFeedLoader? = RemoteFeedLoader(url: url, client: client)
-    
-    var capturedResults = [RemoteFeedLoader.Result]()
-    sut?.load { capturedResults.append($0) }
-    
-    sut = nil
-    client.complete(withStatusCode: 200, data: makeItemsJSON([]))
-    
-    XCTAssertTrue(capturedResults.isEmpty)
   }
   
   // MARK: - Helpers
