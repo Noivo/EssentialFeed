@@ -39,7 +39,6 @@
 		A7989D1029E9A71E00D23C37 /* HTTPClientStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7989D0F29E9A71E00D23C37 /* HTTPClientStub.swift */; };
 		A7989D1229E9A75F00D23C37 /* InMemoryFeedStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7989D1129E9A75F00D23C37 /* InMemoryFeedStore.swift */; };
 		A7989D2E29ED6AD100D23C37 /* UIView+TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7989D2D29ED6AD100D23C37 /* UIView+TestHelpers.swift */; };
-		A7FA781929F1866A004A6C7F /* FeedImageDataLoaderPresentationAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7FA781829F1866A004A6C7F /* FeedImageDataLoaderPresentationAdapter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -101,7 +100,6 @@
 		A7989D0F29E9A71E00D23C37 /* HTTPClientStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClientStub.swift; sourceTree = "<group>"; };
 		A7989D1129E9A75F00D23C37 /* InMemoryFeedStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InMemoryFeedStore.swift; sourceTree = "<group>"; };
 		A7989D2D29ED6AD100D23C37 /* UIView+TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+TestHelpers.swift"; sourceTree = "<group>"; };
-		A7FA781829F1866A004A6C7F /* FeedImageDataLoaderPresentationAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedImageDataLoaderPresentationAdapter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,7 +154,6 @@
 				A780139729DD69AF0096AF28 /* Assets.xcassets */,
 				A780139929DD69AF0096AF28 /* LaunchScreen.storyboard */,
 				A780139C29DD69AF0096AF28 /* Info.plist */,
-				A7FA781829F1866A004A6C7F /* FeedImageDataLoaderPresentationAdapter.swift */,
 				A773FC6F29F1918600056477 /* CombineHelpers.swift */,
 			);
 			path = EssentialApp;
@@ -312,7 +309,6 @@
 				A780139329DD69AE0096AF28 /* ViewController.swift in Sources */,
 				A780138F29DD69AE0096AF28 /* AppDelegate.swift in Sources */,
 				A780139129DD69AE0096AF28 /* SceneDelegate.swift in Sources */,
-				A7FA781929F1866A004A6C7F /* FeedImageDataLoaderPresentationAdapter.swift in Sources */,
 				A7989CF629E9518600D23C37 /* WeakRefVirtualProxy.swift in Sources */,
 				A7989CF429E9518600D23C37 /* FeedUIComposer.swift in Sources */,
 			);
