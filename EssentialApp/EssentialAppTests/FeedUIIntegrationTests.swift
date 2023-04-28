@@ -1,5 +1,5 @@
 //
-//  FeedViewControllerTests.swift
+//  ListViewControllerTests.swift
 //  EssentialFeediOSTests
 //
 //  Created by João Noivo on 21/02/2023.
@@ -320,7 +320,7 @@ final class FeedUIIntegrationTests: XCTestCase {
   
   // MARK: - Helpers
   
-  private func makeSUT(file: StaticString = #file, line: UInt = #line) -> (sut: FeedViewController, loader: LoaderSpy) {
+  private func makeSUT(file: StaticString = #file, line: UInt = #line) -> (sut: ListViewController, loader: LoaderSpy) {
     let loader = LoaderSpy()
     let sut = FeedUIComposer.feedComposedWith(feedLoader: loader.loadPublisher, imageLoader: loader.loadImageDataPublisher)
     trackForMemoryLeaks(loader, file: file, line: line)

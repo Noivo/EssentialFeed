@@ -1,5 +1,5 @@
 //
-//  FeedViewControllerTests+Localization.swift
+//  ListViewControllerTests+Localization.swift
 //  EssentialFeediOSTests
 //
 //  Created by João Noivo on 01/03/2023.
