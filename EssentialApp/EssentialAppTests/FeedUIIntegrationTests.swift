@@ -1,5 +1,5 @@
 //
-//  FeedViewControllerTests.swift
+//  ListViewControllerTests.swift
 //  EssentialFeediOSTests
 //
 //  Created by João Noivo on 21/02/2023.
@@ -113,6 +113,19 @@ final class FeedUIIntegrationTests: XCTestCase {
       loader.completeFeedLoading(with: [], at: 1)
       assertThat(sut, isRendering: [])
   }
+    
+    func test_tapOnErrorView_hidesErrorMessage() {
+       let (sut, loader) = makeSUT()
+
+       sut.loadViewIfNeeded()
+       XCTAssertEqual(sut.errorMessage, nil)
+
+       loader.completeFeedLoadingWithError(at: 0)
+       XCTAssertEqual(sut.errorMessage, loadError)
+
+       sut.simulateErrorViewTap()
+       XCTAssertEqual(sut.errorMessage, nil)
+   }
   
   func test_feedImageView_loadsImageURLWhenVisible() {
     let image0 = makeImage(url: URL(string: "http://url-0.com")!)
@@ -317,10 +330,62 @@ final class FeedUIIntegrationTests: XCTestCase {
     }
     wait(for: [exp], timeout: 1.0)
   }
+    
+//    func test_feedImageView_reloadsImageURLWhenBecomingVisibleAgain() {
+//        let image0 = makeImage(url: URL(string: "http://url-0.com")!)
+//        let image1 = makeImage(url: URL(string: "http://url-1.com")!)
+//        let (sut, loader) = makeSUT()
+//
+//        sut.loadViewIfNeeded()
+//        loader.completeFeedLoading(with: [image0, image1])
+//
+//        sut.simulateFeedImageBecomingVisibleAgain(at: 0)
+//
+//        XCTAssertEqual(loader.loadedImageURLs, [image0.url, image0.url], "Expected two image URL request after first view becomes visible again")
+//
+//        sut.simulateFeedImageBecomingVisibleAgain(at: 1)
+//
+//        XCTAssertEqual(loader.loadedImageURLs, [image0.url, image0.url, image1.url, image1.url], "Expected two new image URL request after second view becomes visible again")
+//    }
+//
+//    func test_feedImageView_configuresViewCorrectlyWhenCellBecomingVisibleAgain() {
+//        let (sut, loader) = makeSUT()
+//
+//        sut.loadViewIfNeeded()
+//        loader.completeFeedLoading(with: [makeImage()])
+//
+//        let view0 = sut.simulateFeedImageBecomingVisibleAgain(at: 0)
+//
+//        XCTAssertEqual(view0?.renderedImage, nil, "Expected no rendered image when view becomes visible again")
+//        XCTAssertEqual(view0?.isShowingRetryAction, false, "Expected no retry action when view becomes visible again")
+//        XCTAssertEqual(view0?.isShowingImageLoadingIndicator, true, "Expected loading indicator when view becomes visible again")
+//
+//        let imageData = UIImage.make(withColor: .red).pngData()!
+//        loader.completeImageLoading(with: imageData, at: 1)
+//
+//        XCTAssertEqual(view0?.renderedImage, imageData, "Expected rendered image when image loads successfully after view becomes visible again")
+//        XCTAssertEqual(view0?.isShowingRetryAction, false, "Expected no retry when image loads successfully after view becomes visible again")
+//        XCTAssertEqual(view0?.isShowingImageLoadingIndicator, false, "Expected no loading indicator when image loads successfully after view becomes visible again")
+//    }
+    
+    func test_feedImageView_doesNotShowDataFromPreviousRequestWhenCellIsReused() throws {
+        let (sut, loader) = makeSUT()
+
+        sut.loadViewIfNeeded()
+        loader.completeFeedLoading(with: [makeImage(), makeImage()])
+
+        let view0 = try XCTUnwrap(sut.simulateFeedImageViewVisible(at: 0))
+        view0.prepareForReuse()
+
+        let imageData0 = UIImage.make(withColor: .red).pngData()!
+        loader.completeImageLoading(with: imageData0, at: 0)
+
+        XCTAssertEqual(view0.renderedImage, .none, "Expected no image state change for reused view once image loading completes successfully")
+    }
   
   // MARK: - Helpers
   
-  private func makeSUT(file: StaticString = #file, line: UInt = #line) -> (sut: FeedViewController, loader: LoaderSpy) {
+  private func makeSUT(file: StaticString = #file, line: UInt = #line) -> (sut: ListViewController, loader: LoaderSpy) {
     let loader = LoaderSpy()
     let sut = FeedUIComposer.feedComposedWith(feedLoader: loader.loadPublisher, imageLoader: loader.loadImageDataPublisher)
     trackForMemoryLeaks(loader, file: file, line: line)
