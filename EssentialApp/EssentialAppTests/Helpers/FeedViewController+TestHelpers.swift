@@ -19,6 +19,18 @@ extension ListViewController {
   func simulateUserInitiatedFeedReload() {
     refreshControl?.simulatePullToRefresh()
   }
+    
+    var isShowingLoadingIndicator: Bool {
+        return refreshControl?.isRefreshing == true
+    }
+
+    func simulateErrorViewTap() {
+        errorView.simulateTap()
+    }
+
+    var errorMessage: String? {
+        return errorView.message
+    }
   
   @discardableResult
   func simulateFeedImageViewVisible(at index: Int) -> FeedImageCell? {
@@ -54,18 +66,6 @@ extension ListViewController {
   func renderedFeedImageData(at index: Int) -> Data? {
     return simulateFeedImageViewVisible(at: index)?.renderedImage
   }
-    
-    func simulateErrorViewTap() {
-        errorView.simulateTap()
-    }
-
-    var errorMessage: String? {
-        return errorView.message
-    }
-  
-  var isShowingLoadingIndicator: Bool {
-    return refreshControl?.isRefreshing == true
-  }
   
   func numberOfRenderedFeedImageViews() -> Int {
       tableView.numberOfSections == 0 ? 0 :  tableView.numberOfRows(inSection: feedImagesSection)
@@ -80,6 +80,17 @@ extension ListViewController {
     let index = IndexPath(row: row, section: feedImagesSection)
     return ds?.tableView(tableView, cellForRowAt: index)
   }
+    
+    @discardableResult
+    func simulateFeedImageBecomingVisibleAgain(at row: Int) -> FeedImageCell? {
+        let view = simulateFeedImageViewNotVisible(at: row)
+
+        let delegate = tableView.delegate
+        let index = IndexPath(row: row, section: feedImagesSection)
+        delegate?.tableView?(tableView, willDisplay: view!, forRowAt: index)
+
+        return view
+    }
   
   private var feedImagesSection: Int {
     return 0
