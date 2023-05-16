@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A72385C92A13E19900D2672F /* NullStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72385C82A13E19900D2672F /* NullStore.swift */; };
 		A773FC7029F1918600056477 /* CombineHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = A773FC6F29F1918600056477 /* CombineHelpers.swift */; };
 		A775A31C2A028EA1008F351F /* CommentsUIComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A775A31B2A028EA1008F351F /* CommentsUIComposer.swift */; };
 		A775A31E2A028ECA008F351F /* CommentsUIIntegrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A775A31D2A028ECA008F351F /* CommentsUIIntegrationTests.swift */; };
@@ -68,6 +69,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		A72385C82A13E19900D2672F /* NullStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NullStore.swift; sourceTree = "<group>"; };
 		A773FC6F29F1918600056477 /* CombineHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombineHelpers.swift; sourceTree = "<group>"; };
 		A775A31B2A028EA1008F351F /* CommentsUIComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsUIComposer.swift; sourceTree = "<group>"; };
 		A775A31D2A028ECA008F351F /* CommentsUIIntegrationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsUIIntegrationTests.swift; sourceTree = "<group>"; };
@@ -158,6 +160,7 @@
 				A780139C29DD69AF0096AF28 /* Info.plist */,
 				A773FC6F29F1918600056477 /* CombineHelpers.swift */,
 				A775A31B2A028EA1008F351F /* CommentsUIComposer.swift */,
+				A72385C82A13E19900D2672F /* NullStore.swift */,
 			);
 			path = EssentialApp;
 			sourceTree = "<group>";
@@ -308,6 +311,7 @@
 			files = (
 				A7989CF829E9518600D23C37 /* FeedViewAdapter.swift in Sources */,
 				A7989CF529E9518600D23C37 /* LoadResourcePresentationAdapter.swift in Sources */,
+				A72385C92A13E19900D2672F /* NullStore.swift in Sources */,
 				A773FC7029F1918600056477 /* CombineHelpers.swift in Sources */,
 				A780139329DD69AE0096AF28 /* ViewController.swift in Sources */,
 				A775A31C2A028EA1008F351F /* CommentsUIComposer.swift in Sources */,
