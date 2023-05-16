@@ -74,7 +74,7 @@
 		A780137829D6E51C0096AF28 /* FeedImageDataStoreSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = A780137729D6E51C0096AF28 /* FeedImageDataStoreSpy.swift */; };
 		A780137A29D6EC210096AF28 /* CacheFeedImageDataUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A780137929D6EC210096AF28 /* CacheFeedImageDataUseCaseTests.swift */; };
 		A780137C29D7153E0096AF28 /* CoreDataFeedImageDataStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A780137B29D7153E0096AF28 /* CoreDataFeedImageDataStoreTests.swift */; };
-		A780137F29D71C470096AF28 /* CoreDataFeedStore+FeedImageDataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A780137E29D71C470096AF28 /* CoreDataFeedStore+FeedImageDataLoader.swift */; };
+		A780137F29D71C470096AF28 /* CoreDataFeedStore+FeedImageDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = A780137E29D71C470096AF28 /* CoreDataFeedStore+FeedImageDataStore.swift */; };
 		A780138129D727180096AF28 /* CoreDataFeedStore+FeedStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = A780138029D727180096AF28 /* CoreDataFeedStore+FeedStore.swift */; };
 		A7823E3829C341CB0049DD26 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7823E3729C341CB0049DD26 /* ErrorView.swift */; };
 		A7823E3D29C34F6A0049DD26 /* UIRefreshControl+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7823E3C29C34F6A0049DD26 /* UIRefreshControl+Helpers.swift */; };
@@ -253,7 +253,7 @@
 		A780137929D6EC210096AF28 /* CacheFeedImageDataUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheFeedImageDataUseCaseTests.swift; sourceTree = "<group>"; };
 		A780137B29D7153E0096AF28 /* CoreDataFeedImageDataStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataFeedImageDataStoreTests.swift; sourceTree = "<group>"; };
 		A780137D29D71A760096AF28 /* FeedStore2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FeedStore2.xcdatamodel; sourceTree = "<group>"; };
-		A780137E29D71C470096AF28 /* CoreDataFeedStore+FeedImageDataLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CoreDataFeedStore+FeedImageDataLoader.swift"; sourceTree = "<group>"; };
+		A780137E29D71C470096AF28 /* CoreDataFeedStore+FeedImageDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CoreDataFeedStore+FeedImageDataStore.swift"; sourceTree = "<group>"; };
 		A780138029D727180096AF28 /* CoreDataFeedStore+FeedStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CoreDataFeedStore+FeedStore.swift"; sourceTree = "<group>"; };
 		A7823E3729C341CB0049DD26 /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
 		A7823E3C29C34F6A0049DD26 /* UIRefreshControl+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIRefreshControl+Helpers.swift"; sourceTree = "<group>"; };
@@ -519,7 +519,7 @@
 				A762CCD4299D4B7000FAAFEA /* CoreDataHelpers.swift */,
 				A762CCD6299D4C2100FAAFEA /* ManagedCache.swift */,
 				A762CCD8299D4C4D00FAAFEA /* ManagedFeedImage.swift */,
-				A780137E29D71C470096AF28 /* CoreDataFeedStore+FeedImageDataLoader.swift */,
+				A780137E29D71C470096AF28 /* CoreDataFeedStore+FeedImageDataStore.swift */,
 				A780138029D727180096AF28 /* CoreDataFeedStore+FeedStore.swift */,
 			);
 			path = CoreData;
@@ -1257,7 +1257,7 @@
 				A762CCD7299D4C2100FAAFEA /* ManagedCache.swift in Sources */,
 				A780136529D5C6690096AF28 /* HTTPURLResponse+StatusCode.swift in Sources */,
 				A784E7B829E2BB6000148AA1 /* FeedCache.swift in Sources */,
-				A780137F29D71C470096AF28 /* CoreDataFeedStore+FeedImageDataLoader.swift in Sources */,
+				A780137F29D71C470096AF28 /* CoreDataFeedStore+FeedImageDataStore.swift in Sources */,
 				A7848AB429F9471A00838B7A /* LoadResourcePresenter.swift in Sources */,
 				A79CCF0D298BFD2F0018A77E /* FeedItemsMapper.swift in Sources */,
 				A762CCAA29999D1200FAAFEA /* FeedCachePolicy.swift in Sources */,
