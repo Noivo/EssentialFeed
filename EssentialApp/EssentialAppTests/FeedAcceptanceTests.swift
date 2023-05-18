@@ -156,7 +156,7 @@ class FeedAcceptanceTests: XCTestCase {
     }
 
     private func makeLastEmptyFeedPageData() -> Data {
-        return try! JSONSerialization.data(withJSONObject: ["items": []])
+        return try! JSONSerialization.data(withJSONObject: ["items": [] as [Any] ] )
     }
     
     private func makeCommentsData() -> Data {
